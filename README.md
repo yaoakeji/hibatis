@@ -1,14 +1,5 @@
 # Hibatis
-Hibatis ，摇啊内部数据库框架(暂不开源),轻量级、高并发、分布式数据库框架 ，是 一套融合Ibatis和JPA优点的ORM框架，完美兼容JPA和SQLMapper两种ORM书写方式。
->>>  对比Hibernate优势
-1、完美兼容JPA和SQLMapper两种ORM书写方式
-2、不使用session缓存，直接采用全局缓存方式，避免session级缓存带来的
-额外内存开销，因为实际应用时很少重复去get/load对象。
-3、为简捷开发，不完全遵循JPA标准，结合JPA和Ibatis特性重新制定JPA；开发效率高，易理解。
-4、避免了Hibernate-JPA常规性异常，如对象关联、懒加载等。
-5、直接瞬时状态实体执行Update，框架会自动把瞬时状态实体和持久对象进行属性复制合并，避免get/load操作带来的烦恼。
-6、灵活简易的全局缓存机制，支持Memory、Redis、Memcached等分布式缓存。
-7、支持分布式对象锁，避免数据for update 带来的数据库额外消耗和高并发问题。
+
 ## 在spring中配置
 ```xml
 <bean id="sqlSessionFactory" class="com.yaoa.hibatis.SqlSessionFactoryBean">
@@ -29,7 +20,7 @@ public class Activity {
 	private String name ; 
 }
 ```
-2、如果使用
+2、如何使用
 ```java
 public class HibatisBaseDao<T> {
 
