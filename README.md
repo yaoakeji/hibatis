@@ -1,5 +1,5 @@
 # Hibatis
-	Hibatis ，摇啊内部数据库框架(暂不开源),轻量级、高并发、分布式数据库框架 ，是 一套融合Ibatis和JPA优点的ORM框架，完美兼容JPA和SQLMapper两种ORM书写方式。
+	Hibatis ，轻量级、高并发、分布式数据库框架 ，是 一套融合Ibatis和JPA优点的ORM框架，完美兼容JPA和SQLMapper两种ORM书写方式。
 	对比Hibernate优势
 	1、完美兼容JPA和SQLMapper两种ORM书写方式
 	2、不使用session缓存，直接采用全局缓存方式，避免session级缓存带来的额外内存开销，因为实际应用时很少重复去get/load对象。
