@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yaoa.hibatis.test.model.Customer">
+
+	<resultMap id="default" type="com.yaoa.hibatis.test.model.Customer"></resultMap>
+
+	<select id="select" resultType="java.util.ArrayList" >
+			SELECT * FROM tb_customer
+	</select>
+</mapper>
