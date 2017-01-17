@@ -26,10 +26,8 @@ import com.yaoa.hibatis.mq.MessageListenerContainer;
 import com.yaoa.hibatis.serializer.Serializer;
 
 /**
- * @Description 基于阿里消息中间件监听容器实现
  * @author cjh
  * @version 1.0
- * @date：2016年12月22日 下午9:41:09
  */
 public class AliMessageListenerContainer implements InitializingBean, DisposableBean , ApplicationContextAware, MessageListenerContainer {
 

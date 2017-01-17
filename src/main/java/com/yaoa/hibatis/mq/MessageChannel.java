@@ -7,10 +7,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @Description TODO
  * @author cjh
  * @version 1.0
- * @date：2016年12月29日 上午11:28:53
  */
 @Retention(RetentionPolicy.RUNTIME) 
 @Target({ElementType.TYPE})

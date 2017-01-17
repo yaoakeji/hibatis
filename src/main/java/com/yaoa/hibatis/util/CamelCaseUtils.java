@@ -9,8 +9,8 @@ public class CamelCaseUtils {
 
 	/**
 	 * 将驼峰式命名转换成下划线式命名
-	 * @param s
-	 * @return
+	 * @param s 输入
+	 * @return 输出
 	 */
 	public static String toUnderlineName(String s) {
 		if (s == null) {
@@ -40,8 +40,8 @@ public class CamelCaseUtils {
 
 	/**
 	 * 将下划线式命名转换成驼峰式命名
-	 * @param s
-	 * @return
+	 * @param s 输入
+	 * @return 输出
 	 */
 	public static String toCamelCase(String s) {
 		if (s == null) {
@@ -66,8 +66,8 @@ public class CamelCaseUtils {
 
 	/**
 	 * 将下划线式命名转换成驼峰式命名, 且首字母大写
-	 * @param s
-	 * @return
+	 * @param s 输入
+	 * @return 输出
 	 */
 	public static String toCapitalizeCamelCase(String s) {
 		if (s == null) {

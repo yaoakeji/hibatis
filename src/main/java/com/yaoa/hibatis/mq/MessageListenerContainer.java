@@ -4,10 +4,8 @@
 package com.yaoa.hibatis.mq;
 
 /**
- * @Description 消息监听器容器
  * @author cjh
  * @version 1.0
- * @date：2016年12月23日 上午10:08:22
  */
 public interface MessageListenerContainer {
 	

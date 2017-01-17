@@ -1,10 +1,8 @@
 package com.yaoa.hibatis.mq;
 
 /**
- * @Description 消息生产者
  * @author cjh
  * @version 1.0
- * @date：2016年12月23日 上午11:09:50
  */
 public interface MessageProducer {
 	

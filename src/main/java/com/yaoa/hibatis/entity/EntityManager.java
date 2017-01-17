@@ -38,7 +38,7 @@ public abstract class EntityManager {
 	 * 查询
 	 * 
 	 * @param criterion  查询条件
-	 * @param sorts 排序条件
+	 * @param <T> 类型
 	 * @return 实体集合
 	 */
 	public abstract <T> List<T> find(Criterion criterion) ;
@@ -46,7 +46,7 @@ public abstract class EntityManager {
 	/**
 	 * 查询，返回一条数据
 	 * @param criterion  查询条件
-	 * @param sorts 排序条件
+	 * @param <T> 类型
 	 * @return 实体对象
 	 */
 	public abstract <T> T findOne(Criterion criterion) ;
@@ -56,6 +56,7 @@ public abstract class EntityManager {
 	 * 获取主键
 	 * @param criterion 查询条件
 	 * @param resultType 结果类型
+	 * @param <R> 类型
 	 * @return 结果集
 	 */
 	public abstract <R> List<R> findIds(Criterion criterion, Class<?> resultType);
@@ -65,6 +66,7 @@ public abstract class EntityManager {
 	 * @param entityType 实体类型
 	 * @param id 主键信息
 	 * @param lockMode 锁模式
+	 * @param <T> 类型
 	 * @return 实体对象
 	 */
 	public abstract <T> T findById(Class<T> entityType , EntityID id , LockMode lockMode);
@@ -73,34 +75,32 @@ public abstract class EntityManager {
 	 * 刷新对象
 	 * @param entity 实体对象
 	 * @param lockMode 锁模式
+	 * @param <T> 类型
 	 */
 	public abstract <T> void refresh(T entity, LockMode lockMode) ;
 	
 	/**
 	 * 通过多个主键获取
-	 * *@param entityType 实体类型
-	 * @param id 主键信息
+	 * @param entityType 实体类型
+	 * @param idList 主键集合
 	 * @param lockMode 锁模式
-	 * @param lock 是否加锁
-	 * @return 实体对象集合
-	 * @return
+	 * @param <T> 类型
+	 * @return 实体集合
 	 */
 	public abstract <T> List<T> findByIds(Class<T> entityType, List<EntityID> idList, LockMode lockMode);
 	
 	/**
 	 * 统计数据记录
-	 * @param entityType 实体类型
 	 * @param criterion 查询条件
-	 * @return
+	 * @return 记录数
 	 */
 	public abstract long count(Criterion criterion);
 	
 	/**
 	 * 分页
 	 * @param criterion 查询条件
-	 * @param pageRequest 分页请求参数
-	 * @param sorts 排序条件
-	 * @return
+	 * @param <T> 类型
+	 * @return 分页
 	 */
 	public abstract <T> Page<T> paging(Criterion criterion) ;
 	
@@ -108,21 +108,24 @@ public abstract class EntityManager {
 	/**
 	 * 集合查询
 	 * @param aggregate 聚合规则
-	 * @param criterion 查询条件
-	 * @return 
-	 * @return
+	 * @param resultType 结果类型
+	 * @param <R> 类型
+	 * @return  实体集合
 	 */
 	public abstract <R> List<R> aggregate(Aggregate aggregate , Class<R> resultType);
 
 	/**
 	 * 新增
 	 * @param obj 实体对象
+	 * @param <T> 类型
+	 * @return 实体对象
 	 */
 	public abstract <T> T insert(Object obj) ;
 
 	/**
 	 *  更新
 	 * @param obj 实体对象
+	 * @return 影响记录数
 	 */
 	public abstract int update(Object obj);
 	
@@ -130,13 +133,15 @@ public abstract class EntityManager {
 	/**
 	 *  保存
 	 * @param obj 实体对象
+	 * @param <T> 类型
+	 * @return 实体
 	 */
 	public abstract <T> T save(Object obj);
 	
 	/**
 	 * 删除 
-	 * @param entityType 实体类型
 	 * @param obj 实体对象
+	 * @return 影响记录数
 	 */
 	public abstract int delete(Object obj);
 	
@@ -152,6 +157,7 @@ public abstract class EntityManager {
 	/**
 	 * 删除 
 	 * @param criterion 条件
+	 * @return 影响行数
 	 */
 	public abstract int delete(Criterion criterion);
 	
@@ -161,7 +167,8 @@ public abstract class EntityManager {
 	 * @param entityType 实体类型
 	 * @param statementId 命令id
 	 * @param parameter 对象
-	 * @return
+	 * @param <T> 类型
+	 * @return 影响记录数
 	 */
 	public abstract <T> int insert(Class<T> entityType , String statementId, T parameter);
 
@@ -170,7 +177,8 @@ public abstract class EntityManager {
 	 * @param entityType 实体类型
 	 * @param statementId 命令id
 	 * @param parameter 对象
-	 * @return
+	 * @param <T> 类型
+	 * @return 实体对象
 	 */
 	public abstract <T> int update(Class<T> entityType , String statementId, Object parameter);
 	
@@ -179,7 +187,8 @@ public abstract class EntityManager {
 	 * @param entityType 实体类型
 	 * @param statementId 命令id
 	 * @param parameter 对象
-	 * @return
+	 * @param <T> 类型
+	 * @return 实体对象
 	 */
 	public abstract <T> int delete(Class<T> entityType , String statementId, Object parameter) ;
 	

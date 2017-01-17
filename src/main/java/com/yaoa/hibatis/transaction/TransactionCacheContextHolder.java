@@ -47,6 +47,7 @@ public final class TransactionCacheContextHolder {
 
 	/**
 	 * 开始事务
+	 * @param name 名称
 	 * @param transaction 事务对象
 	 */
 	public static void begin(String name , Object transaction) {

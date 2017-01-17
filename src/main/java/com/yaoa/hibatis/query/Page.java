@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author kingsy.lin
  * @version 1.0 , 2016年7月15日
- * @param <T>
+ * @param <T> 类型
  */
 public interface Page<T> {
 	

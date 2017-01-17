@@ -13,6 +13,7 @@ import com.esotericsoftware.kryo.io.Output;
  *
  * @author kingsy.lin
  * @version 1.0 , 2016年10月28日
+ * @param <T> 类型
  */
 @SuppressWarnings("unchecked")
 public class KryoSerializer<T> implements Serializer<T> {

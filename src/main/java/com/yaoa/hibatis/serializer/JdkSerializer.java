@@ -7,10 +7,9 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 /**
- * @Description TODO
  * @author cjh
  * @version 1.0
- * @date：2016年12月23日 上午10:36:19
+ * @param <T> 类型
  */
 public class JdkSerializer<T> implements Serializer<T>{
 

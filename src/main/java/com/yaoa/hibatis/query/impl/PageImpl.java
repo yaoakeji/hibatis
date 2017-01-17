@@ -13,7 +13,7 @@ import com.yaoa.hibatis.query.Page;
  *
  * @author kingsy.lin
  * @version 1.0 , 2016年7月15日
- * @param <T>
+ * @param <T> 类型
  */
 public class PageImpl<T> implements  Page<T>{
 

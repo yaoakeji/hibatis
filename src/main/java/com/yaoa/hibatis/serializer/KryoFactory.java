@@ -8,10 +8,8 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import com.esotericsoftware.kryo.Kryo;
 
 /**
- * @Description Kryo序列化工厂
  * @author cjh
  * @version 1.0
- * @date：2016年8月31日 下午6:53:47
  */
 public class KryoFactory {
 

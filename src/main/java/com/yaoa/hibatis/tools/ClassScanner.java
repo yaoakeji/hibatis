@@ -19,10 +19,8 @@ import org.springframework.util.ClassUtils;
 
 
 /**
- * @Description 包扫描工具
  * @author cjh
  * @version 1.0
- * @date：2016年12月12日 上午10:36:05
  */
 public class ClassScanner {
 
@@ -54,9 +52,8 @@ public class ClassScanner {
 	
 	/**
 	 * 将符合条件的Bean以Class集合的形式返回
-	 * @return
-	 * @throws IOException
-	 * @throws ClassNotFoundException
+	 * @throws Exception 异常
+	 * @return 类集合
 	 */
 	public Set<Class<?>> scan() throws Exception {
 		Set<Class<?>> classSet = new HashSet<Class<?>>();

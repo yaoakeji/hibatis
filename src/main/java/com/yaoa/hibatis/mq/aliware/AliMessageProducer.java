@@ -18,10 +18,8 @@ import com.yaoa.hibatis.mq.MessageProducer;
 import com.yaoa.hibatis.serializer.Serializer;
 
 /**
- * @Description 消息生产者
  * @author cjh
  * @version 1.0
- * @date：2016年12月22日 下午9:22:14
  */
 public class AliMessageProducer implements InitializingBean , DisposableBean, MessageProducer{
 	
@@ -43,7 +41,6 @@ public class AliMessageProducer implements InitializingBean , DisposableBean, Me
     
     /**
 	 * 同步发送消息，只要不抛异常就表示成功
-	 * @param key 消息唯一标识， 防重复
 	 * @param message 消息
 	 */
     public void send(com.yaoa.hibatis.mq.Message message){
@@ -53,7 +50,6 @@ public class AliMessageProducer implements InitializingBean , DisposableBean, Me
     
     /**
 	 * 单向发送消息，Oneway形式，服务器不应答，无法保证消息是否成功到达服务器
-	 * @param key 消息唯一标识， 防重复
 	 * @param message 消息
 	 */
     public void sendOneway(com.yaoa.hibatis.mq.Message message){
@@ -64,9 +60,7 @@ public class AliMessageProducer implements InitializingBean , DisposableBean, Me
     
     /**
    	 * 发送异步消息，异步Callback形式
-   	 * @param channel 发送频道
-   	 * @param key 消息唯一标识， 防重复
-   	 * @param message
+   	 * @param message 消息
    	 */
     public void sendAsync(com.yaoa.hibatis.mq.Message message){
     	Message onsMsg = createONSMessage(message);
