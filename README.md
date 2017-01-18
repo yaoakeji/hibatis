@@ -14,6 +14,12 @@
      <property name="dataSource" ref="druidDataSource" />
 </bean>
 <bean class="com.yaoa.hibatis.config.HibatisConfiguration"/>
+
+<bean id="transactionManager" class="com.yaoa.hibatis.transaction.HibatisDataSourceTransactionManager">
+        <property name="dataSource" ref="druidDataSource" />
+</bean>
+
+<tx:annotation-driven transaction-manager="transactionManager"/>
 ```
 ##  如何使用
 1、声明实体,使用注解@com.yaoa.hibatis.annotation.Entity
