@@ -41,6 +41,8 @@ public class HibatisBaseDao<T> {
 	@Autowired
 	private SqlMapperTemplate mapper;
 	
+	///////////////////////  实体 操作 ////////////////////////
+	
 	public T findById(Serializable id) {
 		return mapper.findById(entityType, id);
 	}
@@ -150,7 +152,7 @@ public class HibatisBaseDao<T> {
 		return mapper.deletebyId(entityType, id);
 	}
 	
-	///////////////////////  SQL操作 ////////////////////////
+	///////////////////////  SQLMapper 操作 ////////////////////////
 	
 	public <R> R selectOne(String statement) {
 		return this.selectOne(statement, null);
