@@ -27,7 +27,12 @@
 <tx:annotation-driven transaction-manager="transactionManager"/>
 ```
 ##  如何使用
-1、声明实体,使用注解@com.yaoa.hibatis.annotation.Entity
+### 定义实体
+1、声明实体：使用注解@com.yaoa.hibatis.annotation.Entity
+2、声明主键：使用注解@com.yaoa.hibatis.annotation.Id
+3、表名和列名默认采用骆驼命名法，如果需要修改以下注解
+自定义表名 @com.yaoa.hibatis.annotation.Table
+自定义表名 @com.yaoa.hibatis.annotation.Column
 ```java
 @Entity(cacheable = false)
 @Table(name = "act_activity")
@@ -39,7 +44,7 @@ public class Activity {
 	private String name ; 
 }
 ```
-2、如何使用
+### 数据库操作
 ```java
 public class HibatisBaseDao<T> {
 
