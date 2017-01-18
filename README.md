@@ -10,6 +10,11 @@
 	7、支持分布式对象锁，避免数据for update 带来的数据库额外消耗和高并发问题。
 ## 在spring中配置
 ```xml
+<bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+	<property name="url" value="jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=UTF-8" />
+	<property name="username" value="root" />
+	<property name="password" value="" />
+</bean>
 <bean id="sqlSessionFactory" class="com.yaoa.hibatis.SqlSessionFactoryBean">
      <property name="dataSource" ref="druidDataSource" />
 </bean>
