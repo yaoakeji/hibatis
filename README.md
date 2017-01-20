@@ -8,6 +8,15 @@
 	5、直接瞬时状态实体执行Update，框架会自动把瞬时状态实体和持久对象进行属性复制合并，避免get/load操作带来的烦恼。
 	6、灵活简易的全局缓存机制，支持Memory、Redis、Memcached等分布式缓存。
 	7、支持分布式对象锁，避免数据for update 带来的数据库额外消耗和高并发问题。
+
+## maven依赖
+```xml
+<dependency>
+    <groupId>com.yaoakeji</groupId>
+    <artifactId>hibatis</artifactId>
+    <version>1.4.26</version>
+</dependency>
+```
 ## 在spring中配置
 ```xml
 <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
