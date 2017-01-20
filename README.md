@@ -38,10 +38,10 @@
 ##  如何使用
 ### 定义实体
 	1、声明实体：使用注解@com.yaoa.hibatis.annotation.Entity
-	2、声明主键：使用注解@com.yaoa.hibatis.annotation.Id
+	2、声明主键：使用注解@com.yaoa.hibatis.annotation.Id (支持多个)
 	3、表名和列名默认采用骆驼命名法，如果需要修改以下注解
 	自定义表名 @com.yaoa.hibatis.annotation.Table
-	自定义表名 @com.yaoa.hibatis.annotation.Column
+	自定义列名 @com.yaoa.hibatis.annotation.Column
 ```java
 @Entity(cacheable = false)
 @Table(name = "act_activity")
