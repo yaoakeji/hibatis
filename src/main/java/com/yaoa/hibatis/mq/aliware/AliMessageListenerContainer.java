@@ -106,7 +106,7 @@ public class AliMessageListenerContainer implements InitializingBean, Disposable
 		public Action consume(com.aliyun.openservices.ons.api.Message onsMsg, ConsumeContext context) {
 			try {
 				Message message = serializer.deserialize(onsMsg.getBody());
-				if(message.getDeliverTime() != null && message.getDeliverTime() - System.currentTimeMillis() > AliMessageProducer.MSG_MAX_STORE_TIME){
+				if(message.getDeliverTime() != null){
 					producer.sendAsync(message);
 				}else{
 					message.setKey(onsMsg.getKey());
