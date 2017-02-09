@@ -8,6 +8,15 @@
 	5、直接瞬时状态实体执行Update，框架会自动把瞬时状态实体和持久对象进行属性复制合并，避免get/load操作带来的烦恼。
 	6、灵活简易的全局缓存机制，支持Memory、Redis、Memcached等分布式缓存。
 	7、支持分布式对象锁，避免数据for update 带来的数据库额外消耗和高并发问题。
+
+## maven依赖
+```xml
+<dependency>
+    <groupId>com.yaoakeji</groupId>
+    <artifactId>hibatis</artifactId>
+    <version>1.4.26</version>
+</dependency>
+```
 ## 在spring中配置
 ```xml
 <bean id="druidDataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
@@ -29,10 +38,10 @@
 ##  如何使用
 ### 定义实体
 	1、声明实体：使用注解@com.yaoa.hibatis.annotation.Entity
-	2、声明主键：使用注解@com.yaoa.hibatis.annotation.Id
+	2、声明主键：使用注解@com.yaoa.hibatis.annotation.Id (支持多个)
 	3、表名和列名默认采用骆驼命名法，如果需要修改以下注解
 	自定义表名 @com.yaoa.hibatis.annotation.Table
-	自定义表名 @com.yaoa.hibatis.annotation.Column
+	自定义列名 @com.yaoa.hibatis.annotation.Column
 ```java
 @Entity(cacheable = false)
 @Table(name = "act_activity")
