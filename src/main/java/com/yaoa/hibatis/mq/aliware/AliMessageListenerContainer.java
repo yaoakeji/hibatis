@@ -41,7 +41,7 @@ public class AliMessageListenerContainer implements InitializingBean, Disposable
 
 	private String secretKey;
 
-	private int consumeThreadNums;
+	private int consumeThreadNums = 5;
 
 	private Consumer consumer;
 
